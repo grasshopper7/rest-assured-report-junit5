@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>rest-assured-report-junit5</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 
 	<properties>
 		<aspectj.version>1.9.6</aspectj.version>
@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreport-allure-annotation</artifactId>
-			<version>1.0.0</version>
+			<version>1.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -106,7 +106,7 @@
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>rest-assured-extent-report-plugin</artifactId>
-				<version>1.3.0</version>
+				<version>1.4.0</version>
 				<executions>
 					<execution>
 						<id>report</id>
