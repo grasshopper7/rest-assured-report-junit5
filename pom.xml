@@ -7,7 +7,6 @@
 	<version>1.4.0</version>
 
 	<properties>
-		<aspectj.version>1.9.6</aspectj.version>
 		<junit.jupiter.version>5.8.1</junit.jupiter.version>
 		<allure.results.directory>${project.build.directory}/allure-results
 		</allure.results.directory>
@@ -80,9 +79,6 @@
 						<allure.results.directory>target/allure-results
 						</allure.results.directory>
 					</systemPropertyVariables>
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
 					<properties>
 						<property>
 							<name>listener</name>
@@ -90,18 +86,6 @@
 						</property>
 					</properties>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.aspectj</groupId>
-						<artifactId>aspectjweaver</artifactId>
-						<version>${aspectj.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>org.junit.jupiter</groupId>
-						<artifactId>junit-jupiter</artifactId>
-						<version>${junit.jupiter.version}</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
