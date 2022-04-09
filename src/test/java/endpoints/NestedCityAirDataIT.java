@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import io.qameta.allure.restassured.AllureRestAssured;
+import tech.grasshopper.filter.ExtentRestAssuredFilter;
 
 public class NestedCityAirDataIT {
 
@@ -14,8 +14,8 @@ public class NestedCityAirDataIT {
 
 	@Test
 	public void getRomeAirData() {
-		given().param("token", token).filter(new AllureRestAssured()).when().get("https://api.waqi.info/feed/rome/")
-				.then().statusCode(equalTo(200));
+		given().param("token", token).filter(new ExtentRestAssuredFilter()).when()
+				.get("https://api.waqi.info/feed/rome/").then().statusCode(equalTo(200));
 	}
 
 	@Nested
@@ -23,7 +23,7 @@ public class NestedCityAirDataIT {
 
 		@Test
 		public void getParisAirData() {
-			given().param("token", token).filter(new AllureRestAssured()).when()
+			given().param("token", token).filter(new ExtentRestAssuredFilter()).when()
 					.get("https://api.waqi.info/feed/paris/").then().statusCode(equalTo(200));
 		}
 	}
