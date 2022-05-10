@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>rest-assured-report-junit5</artifactId>
-	<version>2.1.1</version>
+	<version>2.1.2</version>
 
 	<properties>
 		<junit.jupiter.version>5.8.1</junit.jupiter.version>
@@ -21,31 +21,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>${junit.jupiter.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-junit5</artifactId>
-			<version>2.14.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-rest-assured</artifactId>
-			<version>2.14.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>tech.grasshopper</groupId>
-			<artifactId>extent-allure-rest-assured</artifactId>
+			<artifactId>rest-assured-extent-junit5</artifactId>
 			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>tech.grasshopper</groupId>
-			<artifactId>extentreport-allure-annotation</artifactId>
-			<version>1.0.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -96,7 +74,7 @@
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>rest-assured-extent-report-plugin</artifactId>
-				<version>2.1.1</version>
+				<version>2.1.2</version>
 				<executions>
 					<execution>
 						<id>report</id>
