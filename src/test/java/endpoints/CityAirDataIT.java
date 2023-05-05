@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import tech.grasshopper.allure.Author;
@@ -22,6 +23,7 @@ public class CityAirDataIT {
 	private static final String token = "1a5d8f027e344fa191b88e966bdb5d4aa4853d4a";
 
 	@Test
+	@RepeatedTest(value = 3)
 	@Categories({ @Category("Europe") })
 	@Devices({ @Device("Mac"), @Device("Windows") })
 	public void getLondonAirData() {
